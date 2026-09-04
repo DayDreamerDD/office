@@ -10,7 +10,7 @@ on:
     branches: 
       - master
   schedule:
-    - cron: '0 9-17 * * ?'
+    - cron: '0 9-17 * * *'
   workflow_dispatch:
     inputs:
    
@@ -23,7 +23,7 @@ jobs:
     - name: Set up Python #安装python
       uses: actions/setup-python@v1
       with:
-        python-version: 3.11.15
+        python-version: 3.13.15
     - name: Install requirements
       run: |
         pip install requests
